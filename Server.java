@@ -379,7 +379,9 @@ public class Server {
 								printTime(gameName + " "+a.username+" - "+secretWord+" is correct.\n"+a.username+" wins game. ");
 								winCondition(a);
 								loseConditionLastLetter(a);
-								System.out.println("have lost the game");
+								if(al.size()>1) {
+									System.out.println("have lost the game");
+								}
 								game=false;
 								break;
 							}
@@ -405,7 +407,9 @@ public class Server {
 								printTime(gameName + " "+a.username+" - "+guessWord+" is correct.\n"+a.username+" wins game. ");
 								winCondition(a);
 								loseConditionNum2(a, guessWord);
-								System.out.println("have lost the game");
+								if(al.size()>1) {
+									System.out.println("have lost the game");
+								}
 								game=false;
 								break;
 							}else {
